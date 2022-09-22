@@ -1,0 +1,32 @@
+.header {
+    @include dFlex;
+    background-image: linear-gradient(rgba($color-black, 0.8), rgba($color-black, 0.6)), url('../images/bg.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+
+    &__top {
+        @extend .head-title;
+        @include dFlex(row, nowrap, center, center);
+        height: 35vh;
+    }
+
+    &__middle {
+        @include dFlex;
+        direction: rtl;
+        height: 30vh;
+
+        &-caption {
+            font: clamp(1.5rem, 7.5vw, 3rem) $font-sahel;
+            color: $color-secondary;
+        }
+    }
+
+    &__bottom {
+        @include dFlex;
+        direction: rtl;
+        height: 35vh;
+        width: 100%;
+    }
+}

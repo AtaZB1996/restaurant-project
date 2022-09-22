@@ -1,0 +1,457 @@
+@font-face {
+  font-family: Sahel;
+  src: url("../fonts/Sahel.ttf") format("ttf"), url("../fonts/Sahel.woff") format("woff"), url("../fonts/Sahel.eot") format("eot");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #262626;
+  overflow-x: hidden;
+}
+
+.head-title .logo, .footer__top .logo, .header__top .logo {
+  display: flex !important;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(2rem, 10vw, 4rem);
+  width: clamp(3.5rem, 17.5vw, 7rem);
+  height: clamp(3.5rem, 17.5vw, 7rem);
+  color: #d3ab55;
+  border: 3px solid #d3ab55;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-right: clamp(0.5rem, 5vw, 1rem);
+  cursor: pointer;
+}
+.head-title .head-detail, .footer__top .head-detail, .header__top .head-detail {
+  display: flex !important;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  direction: rtl;
+  color: #bbb;
+}
+.head-title .head-detail .name, .footer__top .head-detail .name, .header__top .head-detail .name {
+  font: clamp(1.5rem, 7.5vw, 3rem) Sahel, Tahoma;
+}
+.head-title .head-detail .slogan, .footer__top .head-detail .slogan, .header__top .head-detail .slogan {
+  font: clamp(0.5rem, 4vw, 1rem) Sahel, Tahoma;
+}
+
+.btn {
+  width: clamp(8rem, 12vw, 15rem);
+  height: clamp(5rem, 7vh, 10rem);
+  background-color: transparent;
+  border: 1px solid #d3ab55;
+  color: #d3ab55;
+  font: 1.2rem Sahel, Tahoma;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.btn:hover {
+  background-color: #d3ab55;
+  color: #fff;
+  text-shadow: 0 0 5px #000;
+}
+
+.title {
+  font: clamp(2rem, 15vw, 4rem) IranNastaliq, Tahoma;
+  color: #d3ab55;
+}
+
+#index1 {
+  z-index: 1;
+}
+
+#index2 {
+  z-index: 2;
+}
+
+#index3 {
+  z-index: 3;
+}
+
+#index4 {
+  z-index: 4;
+}
+
+#index5 {
+  z-index: 5;
+}
+
+#index6 {
+  z-index: 6;
+}
+
+#index7 {
+  z-index: 7;
+}
+
+#index8 {
+  z-index: 8;
+}
+
+#index9 {
+  z-index: 9;
+}
+
+#index10 {
+  z-index: 10;
+}
+
+#index11 {
+  z-index: 11;
+}
+
+#index12 {
+  z-index: 12;
+}
+
+@media only screen and (min-width: 768px) {
+  .main__aboutUs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+  .main__aboutUs-left {
+    display: flex !important;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .main__gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+  .main__gallery-card {
+    width: 50vw !important;
+    height: 50vw !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .nav__menu-right .menu-item {
+    font-size: clamp(2rem, 5vw, 4rem) !important;
+  }
+  .main__aboutUs-left {
+    display: flex !important;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 80vw !important;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .nav__menu-left {
+    display: flex !important;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav__menu-right {
+    width: 50vw !important;
+  }
+  .main__gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+  .main__gallery-card {
+    width: 33vw !important;
+    height: 33vw !important;
+  }
+}
+.nav__hamburger {
+  position: fixed;
+  z-index: 30;
+  width: 35px;
+  height: 40px;
+  top: 5%;
+  right: 5%;
+}
+.nav__hamburger .line {
+  width: 100%;
+  height: 3px;
+  margin: 0.5rem auto;
+  background-color: #d3ab55;
+}
+.nav__hamburger:hover {
+  cursor: pointer;
+}
+.nav__menu {
+  z-index: 20;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  height: 0vh;
+  position: fixed;
+}
+.nav__menu-left {
+  display: none;
+  position: relative;
+  width: 50vw;
+  background-color: #262626;
+  left: -100%;
+  transition: left 0.5s ease-in-out;
+}
+.nav__menu-left .img {
+  position: relative;
+  width: 50%;
+  height: auto;
+  opacity: 0.8;
+  border-radius: 8px;
+  box-shadow: 0 0 20px #000;
+}
+.nav__menu-left .img1 {
+  margin-bottom: -7%;
+  margin-left: -20%;
+}
+.nav__menu-left .img3 {
+  margin-top: -7%;
+  margin-right: -20%;
+}
+.nav__menu-right {
+  display: flex !important;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #1F1D1D;
+  color: #bbb;
+  right: -100%;
+  transition: right 0.5s ease-in-out;
+}
+.nav__menu-right .menu-item {
+  font: 2.5rem Sahel, Tahoma;
+  line-height: 200%;
+  transition: all 0.3s;
+}
+.nav__menu-right .menu-item:hover {
+  cursor: pointer;
+  letter-spacing: 0.12rem;
+  color: #d3ab55;
+}
+.nav #menu-toggle:checked ~ .nav__menu .nav__menu-left {
+  left: 0;
+}
+.nav #menu-toggle:checked ~ .nav__menu .nav__menu-right {
+  right: 0;
+}
+
+.header {
+  display: flex !important;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("../images/bg.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+.header__top {
+  display: flex !important;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 35vh;
+}
+.header__middle {
+  display: flex !important;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  direction: rtl;
+  height: 30vh;
+}
+.header__middle-caption {
+  font: clamp(1.5rem, 7.5vw, 3rem) Sahel, Tahoma;
+  color: #bbb;
+}
+.header__bottom {
+  display: flex !important;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  direction: rtl;
+  height: 35vh;
+  width: 100%;
+}
+
+.main {
+  padding: 2% 0 5%;
+}
+.main__aboutUs {
+  min-height: 100vh;
+  padding-inline: 5%;
+}
+.main__aboutUs-left {
+  display: flex !important;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+}
+.main__aboutUs-left-bg {
+  width: 100%;
+  opacity: 0.7;
+}
+.main__aboutUs-right {
+  display: flex !important;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  direction: rtl;
+}
+.main__aboutUs-right-caption {
+  font: 2rem Sahel, Tahoma;
+  color: #bbb;
+  padding-bottom: 3rem;
+}
+.main__aboutUs-right-text {
+  text-align: center;
+  display: flex !important;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.main__aboutUs-right-text .stars {
+  padding: 1.5rem 0;
+}
+.main__aboutUs-right-text .stars .star {
+  padding-inline: 0.5rem;
+  color: #d3ab55;
+}
+.main__aboutUs-right-text .text {
+  font: 1.1rem IranNastaliq, Tahoma;
+  color: #bbb;
+}
+.main__aboutUs-right .btn {
+  margin: 1.5rem 0;
+}
+.main__gallery {
+  overflow: hidden;
+}
+.main__gallery-card {
+  position: relative;
+  display: flex !important;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vw;
+}
+.main__gallery-card:hover .description {
+  left: -25%;
+}
+.main__gallery-card:hover .yellow-layer {
+  left: -150%;
+}
+.main__gallery-card .gray-layer {
+  display: flex !important;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(38, 38, 38, 0.5);
+}
+.main__gallery-card .yellow-layer {
+  display: flex !important;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  width: 200%;
+  left: -250%;
+  position: absolute;
+  background-color: rgba(211, 171, 85, 0.7);
+  transform: skewX(20deg);
+  transition: left 0.5s ease;
+}
+.main__gallery-card .gallery-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main__gallery-card .description {
+  display: flex !important;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  left: -100%;
+  position: absolute;
+  transition: left 0.5s ease;
+}
+.main__gallery-card .description .food-name {
+  font: 3rem IranNastaliq, Tahoma;
+  margin-left: -15%;
+}
+.main__gallery-card .description .price {
+  font: 1.25rem Sahel, Tahoma;
+  margin: 5% 0;
+}
+.main__gallery-card .description .order {
+  width: 30%;
+  height: 10%;
+  margin-top: 10%;
+  border-radius: 5vh;
+  font: 1rem Sahel, Tahoma;
+  border: none;
+  color: #d3ab55;
+  background-color: #fff;
+}
+.main__gallery-card .description .order:hover {
+  cursor: pointer;
+}
+
+.footer {
+  display: flex !important;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.footer__top {
+  display: flex !important;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.footer__middle {
+  display: flex !important;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.footer__middle i {
+  margin: clamp(1rem, 10vw, 3rem) clamp(0.5rem, 3vw, 1rem);
+  color: #bbb;
+  font-size: clamp(1rem, 10vw, 3rem);
+  transition: color 0.3s;
+}
+.footer__middle i:hover {
+  cursor: pointer;
+  color: #d3ab55;
+}
+.footer__bottom {
+  direction: rtl;
+  text-align: center;
+  color: #bbb;
+  font: clamp(0.5rem, 4vw, 1.3rem) Sahel, Tahoma;
+  padding: clamp(0.25rem, 2vw, 1rem);
+}/*# sourceMappingURL=main.css.map */

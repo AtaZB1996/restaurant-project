@@ -1,0 +1,150 @@
+$color-dark: #262626;
+$color-black: #000;
+$color-primary: #d3ab55;
+$color-secondary: #bbb;
+
+$font-josefinSans: "Josefin Sans";
+$font-sahel: Sahel, Tahoma;
+$font-nastaliq: IranNastaliq, Tahoma;
+
+@font-face {
+    font-family: Sahel;
+    src: url("../fonts/Sahel.ttf") format("ttf"),
+        url("../fonts/Sahel.woff") format("woff"),
+        url("../fonts/Sahel.eot") format("eot");
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $color-dark;
+    overflow-x: hidden;
+}
+
+@mixin fullSpace {
+    width: 100%;
+    height: 100%;
+}
+
+@mixin dFlex($direction: column, $wrap: nowrap, $justifyContent: center, $alignItem: center) {
+    display: flex !important;
+    flex-flow: $direction $wrap;
+    justify-content: $justifyContent;
+    align-items: $alignItem;
+}
+
+@mixin dGrid($columnsNum: 2) {
+    display: grid;
+    grid-template-columns: repeat($columnsNum, 1fr);
+    grid-template-rows: auto;
+}
+
+.head-title {
+    .logo {
+        @include dFlex;
+        font-size: clamp(2rem, 10vw, 4rem);
+        // font-size: 4rem;
+        width: clamp(3.5rem, 17.5vw, 7rem);
+        height: clamp(3.5rem, 17.5vw, 7rem);
+        color: $color-primary;
+        border: 3px solid $color-primary;
+        padding: 1rem;
+        border-radius: 50%;
+        margin-right: clamp(0.5rem, 5vw, 1rem);
+        cursor: pointer;
+    }
+
+    .head-detail {
+        @include dFlex;
+        direction: rtl;
+        color: $color-secondary;
+
+        .name {
+            font: clamp(1.5rem, 7.5vw, 3rem) $font-sahel;
+        }
+
+        .slogan {
+            font: clamp(0.5rem, 4vw, 1rem) $font-sahel;
+        }
+    }
+}
+
+.btn {
+    width: clamp(8rem, 12vw, 15rem);
+    height: clamp(5rem, 7vh, 10rem);
+    background-color: transparent;
+    border: 1px solid $color-primary;
+    color: $color-primary;
+    font: 1.2rem $font-sahel;
+    cursor: pointer;
+    transition: all 0.4s;
+
+    &:hover {
+        background-color: $color-primary;
+        color: #fff;
+        text-shadow: 0 0 5px $color-black;
+    }
+}
+
+.title {
+    font: clamp(2rem, 15vw, 4rem) $font-nastaliq;
+    color: $color-primary;
+}
+
+@for $i from 1 through 12 {
+    #index#{$i} {
+        z-index: $i;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .main__aboutUs{
+        @include dGrid;
+
+        &-left{
+            @include dFlex;
+        }
+    }
+}
+@media only screen and (min-width: 576px) {
+    .main__gallery{
+        @include dGrid(2);
+        &-card {
+            width: 50vw !important;
+            height: 50vw !important;
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+
+    .nav__menu-right{
+        .menu-item{
+            font-size: clamp(2rem, 5vw, 4rem) !important;
+        }
+    }
+    .main__aboutUs-left{
+        @include dFlex;
+        width: 80vw !important;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .nav__menu-left{
+        @include dFlex;
+    }
+    .nav__menu-right{
+        width: 50vw !important;
+    }
+
+    .main__gallery{
+        @include dGrid(3);
+        &-card {
+            width: 33vw !important;
+            height: 33vw !important;
+        }
+    }
+}

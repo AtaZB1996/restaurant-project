@@ -1,0 +1,30 @@
+.footer{
+    @include dFlex;
+    &__top{
+        @extend .head-title;
+        @include dFlex(row, nowrap, center, center);
+    }
+
+    &__middle{
+        @include dFlex(row, nowrap, center, center);
+        i{
+            margin: clamp(1rem, 10vw, 3rem) clamp(0.5rem, 3vw, 1rem);
+            color: $color-secondary;
+            font-size: clamp(1rem, 10vw, 3rem);
+            transition: color 0.3s;
+
+            &:hover{
+                cursor: pointer;
+                color: $color-primary;
+            }
+        }
+    }
+
+    &__bottom{
+        direction: rtl;
+        text-align: center;
+        color: $color-secondary;
+        font: clamp(0.5rem, 4vw, 1.3rem) $font-sahel;
+        padding: clamp(0.25rem, 2vw, 1rem);
+    }
+}

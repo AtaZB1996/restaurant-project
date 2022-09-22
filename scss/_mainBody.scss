@@ -1,0 +1,129 @@
+.main {
+    padding: 2% 0 5%;
+
+    &__aboutUs {
+        min-height: 100vh;
+        padding-inline: 5%;
+
+        &-left {
+            @include dFlex;
+            width: 40vw;
+
+            &-bg {
+                width: 100%;
+                opacity: 0.7;
+            }
+        }
+
+        &-right {
+            @include dFlex;
+            direction: rtl;
+
+            &-caption {
+                font: 2rem $font-sahel;
+                color: $color-secondary;
+                padding-bottom: 3rem;
+            }
+
+            &-text {
+                text-align: center;
+                @include dFlex;
+
+                .stars {
+                    padding: 1.5rem 0;
+
+                    .star {
+                        padding-inline: 0.5rem;
+                        color: $color-primary;
+                    }
+                }
+
+                .text {
+                    font: 1.1rem $font-nastaliq;
+                    color: $color-secondary;
+                }
+            }
+
+            .btn {
+                margin: 1.5rem 0;
+            }
+        }
+    }
+
+    &__gallery {
+        overflow: hidden;
+
+        &-card {
+            position: relative;
+            @include dFlex;
+            width: 100vw;
+            height: 100vw;
+
+            &:hover .description {
+                left: -25%;
+            }
+            &:hover .yellow-layer {
+                left: -150%;
+            }
+
+            .gray-layer {
+                @include dFlex;
+                @include fullSpace;
+                position: absolute;
+                background-color: rgba($color-dark, 0.5);
+            }
+
+            .yellow-layer{
+                @include dFlex;
+                @include fullSpace;
+                color: #fff;
+                width: 200%;
+                left: -250%;
+                position: absolute;
+                background-color: rgba($color-primary, 0.7);
+                transform: skewX(20deg);
+                transition: left 0.5s ease;
+            }
+
+            .gallery-item {
+                @include fullSpace;
+                object-fit: cover;
+            }
+
+            .description {
+                @include dFlex;
+                @include fullSpace;
+                color: #fff;
+                left: -100%;
+                position: absolute;
+                // background-color: rgba($color-primary, 0.7);
+                transition: left 0.5s ease;
+
+                .food-name {
+                    font: 3rem $font-nastaliq;
+                    margin-left: -15%;
+                }
+
+                .price {
+                    font: 1.25rem $font-sahel;
+                    margin: 5% 0;
+                }
+
+                .order {
+                    width: 30%;
+                    height: 10%;
+                    margin-top: 10%;
+                    border-radius: 5vh;
+                    font: 1rem $font-sahel;
+                    border: none;
+                    color: $color-primary;
+                    background-color: #fff;
+
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

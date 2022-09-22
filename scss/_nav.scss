@@ -1,0 +1,89 @@
+.nav {
+
+    &__hamburger {
+        position: fixed;
+        z-index: 30;
+        width: 35px;
+        height: 40px;
+        top: 5%;
+        right: 5%;
+
+        .line {
+            width: 100%;
+            height: 3px;
+            margin: 0.5rem auto;
+            background-color: $color-primary;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__menu {
+        z-index: 20;
+        @include dGrid;
+        height: 0vh;
+        position: fixed;
+
+        &-left {
+            display: none;
+            position: relative;
+            width: 50vw;
+            // min-height: 100vh;
+            background-color: $color-dark;
+            left: -100%;
+            transition: left 0.5s ease-in-out;
+
+            
+            .img {
+                position: relative;
+                width: 50%;
+                height: auto;
+                opacity: 0.8;
+                border-radius: 8px;
+                box-shadow: 0 0 20px $color-black;
+            }
+
+            .img1 {
+                margin-bottom: -7%;
+                margin-left: -20%;
+            }
+
+            .img3 {
+                margin-top: -7%;
+                margin-right: -20%;
+            }
+        }
+
+        &-right {
+            @include dFlex;
+            position: relative;
+            width: 100vw;
+            min-height: 100vh;
+            background-color: #1F1D1D;
+            color: $color-secondary;
+            right: -100%;
+            transition: right 0.5s ease-in-out;
+
+            .menu-item {
+                font: 2.5rem $font-sahel;
+                line-height: 200%;
+                transition: all 0.3s;
+
+                &:hover {
+                    cursor: pointer;
+                    letter-spacing: 0.12rem;
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+
+    #menu-toggle:checked ~ .nav__menu .nav__menu-left{
+        left: 0;
+    }
+    #menu-toggle:checked ~ .nav__menu .nav__menu-right{
+        right: 0;
+    }
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/1525a7dfa6.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Restaurant Project</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="nav">
+      <!-- Hamburger Menu -->
+      <input id="menu-toggle" type="checkbox" hidden />
+      <label class="nav__hamburger" for="menu-toggle">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+      </label>
+
+      <!-- Menu Content -->
+      <section class="nav__menu">
+        <section class="nav__menu-left">
+          <img src="images/nav-img-1.jpeg" alt="" class="img img1" />
+          <img src="images/nav-img-2.jpeg" alt="" class="img img2" />
+          <img src="images/nav-img-3.jpeg" alt="" class="img img3" />
+        </section>
+        <section class="nav__menu-right">
+          <h3 class="menu-item">خانه</h3>
+          <h3 class="menu-item">درباره ما</h3>
+          <h3 class="menu-item">گالری تصاویر</h3>
+          <h3 class="menu-item">رزرو میز</h3>
+          <h3 class="menu-item">سرویس ها</h3>
+          <h3 class="menu-item">تماس با ما</h3>
+        </section>
+      </section>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+      <!-- Top -->
+      <section class="header__top">
+        <i class="fa-solid fa-utensils logo"></i>
+        <div class="header__top-details head-detail">
+          <h1 class="name">رستوران من</h1>
+          <p class="slogan">غذاهای لذیذ ما</p>
+        </div>
+      </section>
+
+      <!-- Middle -->
+      <section class="header__middle">
+        <h2 class="header__middle-title title">خوش آمدید</h2>
+        <h3 class="header__middle-caption">غذاهای ما را امتحان کنید</h3>
+      </section>
+
+      <!-- Bottom -->
+      <section class="header__bottom">
+        <button type="button" class="btn">رزرو میز</button>
+      </section>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+      <!-- About Us -->
+      <section class="main__aboutUs">
+        <!-- Left -->
+        <section class="main__aboutUs-left">
+          <img
+            src="images/about-us-img.png"
+            alt=""
+            class="main__aboutUs-left-bg"
+          />
+        </section>
+
+        <!-- Right -->
+        <section class="main__aboutUs-right">
+          <h2 class="main__aboutUs-right-title title">درباره رستوران</h2>
+          <h3 class="main__aboutUs-right-caption">درباره دستپخت من</h3>
+          <div class="main__aboutUs-right-text">
+            <div class="stars">
+              <i class="fa-solid fa-star-of-life star"></i>
+              <i class="fa-solid fa-star-of-life star"></i>
+              <i class="fa-solid fa-star-of-life star"></i>
+            </div>
+            <p class="text">
+              ابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه
+              و وع متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای
+              طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان
+              فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری
+              موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد
+              نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل
+              دنیای موجود طراحی اساسا مورد استفاده قرار گیرد. ر این صورت می توان
+              امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت
+              تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و
+              جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده
+              قرار گیرد
+            </p>
+            <div class="stars">
+              <i class="fa-solid fa-star-of-life star"></i>
+              <i class="fa-solid fa-star-of-life star"></i>
+              <i class="fa-solid fa-star-of-life star"></i>
+            </div>
+          </div>
+          <button type="button" class="btn">اطلاعات بیشتر</button>
+        </section>
+      </section>
+
+      <!-- Gallery -->
+      <section class="main__gallery">
+        <section class="main__gallery-card" id="index11">
+          <div class="gray-layer"></div>
+          <div class="yellow-layer"></div>
+          <div class="description" id="index12">
+            <h2 class="food-name">نام غذا</h2>
+            <h3 class="price">قیمت 100000</h3>
+            <button type="button" class="order">سفارش</button>
+          </div>
+          <img src="images/gallery-img-1.jpeg" alt="" class="gallery-item" />
+        </section>
+        <section class="main__gallery-card" id="index9">
+          <div class="gray-layer"></div>
+          <div class="yellow-layer"></div>
+          <div class="description" id="index10">
+            <h2 class="food-name">نام غذا</h2>
+            <h3 class="price">قیمت 100000</h3>
+            <button type="button" class="order">سفارش</button>
+          </div>
+          <img src="images/gallery-img-2.jpeg" alt="" class="gallery-item" />
+        </section>
+        <section class="main__gallery-card" id="index7">
+          <div class="gray-layer"></div>
+          <div class="yellow-layer"></div>
+          <div class="description" id="index8">
+            <h2 class="food-name">نام غذا</h2>
+            <h3 class="price">قیمت 100000</h3>
+            <button type="button" class="order">سفارش</button>
+          </div>
+          <img src="images/gallery-img-3.jpeg" alt="" class="gallery-item" />
+        </section>
+        <section class="main__gallery-card" id="index5">
+          <div class="gray-layer"></div>
+          <div class="yellow-layer"></div>
+          <div class="description" id="index6">
+            <h2 class="food-name">نام غذا</h2>
+            <h3 class="price">قیمت 100000</h3>
+            <button type="button" class="order">سفارش</button>
+          </div>
+          <img src="images/gallery-img-4.jpeg" alt="" class="gallery-item" />
+        </section>
+        <section class="main__gallery-card" id="index3">
+          <div class="gray-layer"></div>
+          <div class="yellow-layer"></div>
+          <div class="description" id="index4">
+            <h2 class="food-name">نام غذا</h2>
+            <h3 class="price">قیمت 100000</h3>
+            <button type="button" class="order">سفارش</button>
+          </div>
+          <img src="images/gallery-img-5.jpeg" alt="" class="gallery-item" />
+        </section>
+        <section class="main__gallery-card" id="index1">
+          <div class="gray-layer"></div>
+          <div class="yellow-layer"></div>
+          <div class="description" id="index2">
+            <h2 class="food-name">نام غذا</h2>
+            <h3 class="price">قیمت 100000</h3>
+            <button type="button" class="order">سفارش</button>
+          </div>
+          <img src="images/gallery-img-6.jpeg" alt="" class="gallery-item" />
+        </section>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <!-- Top -->
+      <section class="footer__top">
+        <i class="fa-solid fa-utensils logo"></i>
+        <div class="footer__top-details head-detail">
+          <h1 class="name">رستوران من</h1>
+          <p class="slogan">غذاهای لذیذ ما</p>
+        </div>
+      </section>
+
+      <!-- Middle -->
+      <section class="footer__middle">
+        <i class="fa-brands fa-square-facebook"></i>
+        <i class="fa-brands fa-square-google-plus"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+      </section>
+
+      <!-- Bottom -->
+      <section class="footer__bottom">
+        <p class="copyright">
+          &copy;کپی رایت. تمام حقوق این سایت متعلق به عطا ظهیرپور میباشد
+        </p>
+      </section>
+    </footer>
+  </body>
+</html>
